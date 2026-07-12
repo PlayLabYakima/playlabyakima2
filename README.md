@@ -1,64 +1,156 @@
-# Astro Starter Kit: Blog
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play Lab Yakima</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/astro-blog-starter-template)
+    <style>
+        :root {
+            --teal: #1BA6A4;
+            --orange: #F28C28;
+            --gray: #4A4A4A;
+            --light-gray: #f5f5f5;
+        }
 
-![Astro Template Preview](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background: var(--light-gray);
+            color: var(--gray);
+        }
 
-<!-- dash-content-start -->
+        header {
+            background: var(--teal);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
 
-Create a blog with Astro and deploy it on Cloudflare Workers as a [static website](https://developers.cloudflare.com/workers/static-assets/).
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+        }
 
-Features:
+        header h2 {
+            margin: 0.5rem 0 0;
+            font-size: 1.4rem;
+            font-weight: 300;
+        }
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-- ✅ Built-in Observability logging
+        .section {
+            padding: 2.5rem 1.5rem;
+            max-width: 900px;
+            margin: auto;
+        }
 
-<!-- dash-content-end -->
+        .section h3 {
+            color: var(--teal);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
 
-## Getting Started
+        .phase-box {
+            background: white;
+            border-left: 8px solid var(--orange);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 6px;
+        }
 
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
+        .phase-box h4 {
+            margin-top: 0;
+            color: var(--orange);
+            font-size: 1.4rem;
+        }
 
-```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/astro-blog-starter-template
-```
+        footer {
+            background: var(--teal);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
 
-A live public deployment of this template is available at [https://astro-blog-starter-template.templates.workers.dev](https://astro-blog-starter-template.templates.workers.dev)
+        footer a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
 
-## 🚀 Project Structure
+        /* Editable text areas */
+        .editable {
+            background: #fff7e6;
+            padding: 1rem;
+            border: 1px dashed var(--orange);
+            border-radius: 6px;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+<body>
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+    <header>
+        <h1>PL@Y</h1>
+        <h2>Play Lab Yakima</h2>
+    </header>
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+    <section class="section">
+        <h3>Our Mission</h3>
+        <p><strong>Bringing families together through meaningful play to build a stronger and happier Yakima for all.</strong></p>
 
-Any static assets, like images, can be placed in the `public/` directory.
+        <div class="editable">
+            <p><em>Hello! This dream started after talking to parents and other docs who also feel strongly that play is essential. We want accessible free play spaces for our children and community. Come and join us and help us build Yakima's first all free children's museum. </em></p>
+        </div>
+    </section>
 
-## 🧞 Commands
+    <section class="section">
+        <h3>Our Three-Phase Plan</h3>
 
-All commands are run from the root of the project, from a terminal:
+        <div class="phase-box">
+            <h4>Phase 1 — Spreading Meaningful Play</h4>
+            <p>Pop-up Play Labs across the Yakima Valley, mini-museum experiences, and hands-on activities that teach meaningful, child-led play. Online and in-person content for caregivers.</p>
 
-| Command                           | Action                                           |
-| :-------------------------------- | :----------------------------------------------- |
-| `npm install`                     | Installs dependencies                            |
-| `npm run dev`                     | Starts local dev server at `localhost:4321`      |
-| `npm run build`                   | Build your production site to `./dist/`          |
-| `npm run preview`                 | Preview your build locally, before deploying     |
-| `npm run astro ...`               | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help`         | Get help using the Astro CLI                     |
-| `npm run build && npm run deploy` | Deploy your production site to Cloudflare        |
-| `npm wrangler tail`               | View real-time logs for all Workers              |
+            <div class="editable">
+                <p><em>Upcoming Event: August 27th Downtown Summer Nights </em></p>
+            </div>
+        </div>
 
-## 👀 Want to learn more?
+        <div class="phase-box">
+            <h4>Phase 2 — Temporary Children’s Museum</h4>
+            <p>A small, walkable, bus-line accessible brick-and-mortar space with rotating exhibits and free museum experiences for families.</p>
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+            <div class="editable">
+                <p><em>Do you have a space in your business you are willing to donate? Do you have rental property that would be a good fit? Call or text us with your ideas</em></p>
+            </div>
+        </div>
 
-## Credit
+        <div class="phase-box">
+            <h4>Phase 3 — Full-Scale Museum & Community Hub</h4>
+            <p>A large, collaborative children’s museum designed with community partners, offering meeting space, relationship-building programs, and play-centered learning.</p>
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+            <div class="editable">
+                <p><em>Help Us reach our goal. https://www.paypal.com/ncp/payment/WSDS8EQUPJCYG </em></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>Get Involved</h3>
+        <p>We’re building this with Yakima, for Yakima. Reach out anytime — we’d love to connect.</p>
+
+        <p><strong>Email:</strong> <a href="mailto:info@playlabyakima.org">info@playlabyakima.org</a></p>
+
+        <div class="editable">
+            <p><em>or call or text us at 509-906-2067 </em></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© Play Lab Yakima — Building Yakima’s Children’s Museum Together</p>
+    </footer>
+
+</body>
+</html>
